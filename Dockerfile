@@ -1,24 +1,15 @@
-# docker file optimization
+FROM node:20
 
-# base image
-FROM node:16-alpine
-
-# working Directory
 WORKDIR /app
 
 COPY package* .
-COPY ./prisma .
 
 RUN npm install
-RUN npx prisma generate
 
-# copy the content form current folder to the working Dir 
 COPY . .
 
-# run these commands when building the image 
-RUN npm run build 
+RUN npm run build
 
 EXPOSE 3000
 
 CMD ["node", "dist/index.js"]
-

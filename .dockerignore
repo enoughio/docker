@@ -1,23 +1,2 @@
-# Logs
-logs
-*.log
-
-# Runtime data
-pids
-.env
-*.pid
-*.seed
-*.pid.lock
-
-# Dependency directories
-node_modules/
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Build files
-dist/
-build/
+node_modules
+dist
